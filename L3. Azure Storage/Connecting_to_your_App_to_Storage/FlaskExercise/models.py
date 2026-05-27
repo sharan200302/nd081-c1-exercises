@@ -9,7 +9,7 @@ storage_url = "https://{}.blob.core.windows.net/".format(app.config['BLOB_ACCOUN
 blob_service = BlobServiceClient(account_url=storage_url, credential=app.config['BLOB_STORAGE_KEY'])
 
 class Animal(db.Model):
-    __tablename__ = 'animals'
+    __tablename__ = 'animal'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(75))
     scientific_name = db.Column(db.String(75))
